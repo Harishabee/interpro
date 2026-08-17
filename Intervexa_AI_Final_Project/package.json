@@ -1,0 +1,16 @@
+{
+  "name": "intervexa-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Intervexa AI interview coach with real resume text extraction and analysis",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mammoth": "^1.9.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1"
+  }
+}

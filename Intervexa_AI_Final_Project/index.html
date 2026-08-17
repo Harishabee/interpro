@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Intervexa AI | AI Interview Coach</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-logo">M</span><span>Intervexa <b>AI</b></span></div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="dashboard">▦ <span>Dashboard</span></button>
+      <button class="nav-item" data-page="interview">▣ <span>Mock Interview</span></button>
+      <button class="nav-item" data-page="resume">▤ <span>Resume Analysis</span></button>
+      <button class="nav-item" data-page="feedback">◉ <span>AI Feedback</span></button>
+      <button class="nav-item" data-page="questions">? <span>Practice Questions</span></button>
+      <button class="nav-item" data-page="tips">✦ <span>Interview Tips</span></button>
+      <button class="nav-item" data-page="progress">▥ <span>Progress</span></button>
+      <button class="nav-item" data-page="saved">▱ <span>Saved Sessions</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <button class="nav-item" data-page="settings">⚙ <span>Settings</span></button>
+      <button class="nav-item" data-page="help">? <span>Help & Support</span></button>
+      <div class="pro-card"><div class="crown">♛</div><h4>Upgrade to Pro</h4><p>Unlock unlimited mock interviews, advanced feedback, and more.</p><button id="upgradeBtn">Upgrade Now</button></div>
+      <button class="nav-item" id="logout">↪ <span>Logout</span></button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div><h1>Hello, Harisha! 👋</h1><p>Ready to ace your next interview?</p></div>
+      <div class="user"><span class="bell">♧</span><span class="avatar">H</span><span>Harisha⌄</span></div>
+    </header>
+
+    <section id="dashboard" class="page active">
+      <div class="hero">
+        <div><div class="eyebrow">AI-POWERED INTERVIEWS</div><h2>Real-World Results</h2><p>Practice smarter with AI that listens, analyzes, and helps you improve.</p><button class="primary" data-page="interview">Start Mock Interview →</button></div>
+        <div class="robot"><div class="speech">•••</div><div class="bot-head"><div class="bot-face"><i></i><i></i></div></div><div class="bot-body"></div><div class="laptop"></div></div>
+      </div>
+      <div class="stats">
+        <div class="stat-card"><span class="stat-icon blue">♟</span><div><b>12</b><small>Mock Interviews<br>Completed</small></div></div>
+        <div class="stat-card"><span class="stat-icon green">↗</span><div><b>85%</b><small>Average Score<br>Good job!</small></div></div>
+        <div class="stat-card"><span class="stat-icon yellow">★</span><div><b>24</b><small>Questions Practiced<br>Keep going!</small></div></div>
+        <div class="stat-card"><span class="stat-icon purple">◷</span><div><b>8.5 hrs</b><small>Time Practiced<br>Total time</small></div></div>
+      </div>
+      <div class="two-col">
+        <div class="card"><div class="card-title"><h3>Recent Interviews</h3><button class="link" data-page="saved">View all</button></div>
+          <div class="interview-row"><span class="round bluebg">&lt;/&gt;</span><div><b>Frontend Developer Interview</b><small>May 22, 2026 • 45 mins</small></div><strong class="score">88%</strong>›</div>
+          <div class="interview-row"><span class="round">☕</span><div><b>Java Developer Interview</b><small>May 20, 2026 • 40 mins</small></div><strong class="score">82%</strong>›</div>
+          <div class="interview-row"><span class="round">⚛</span><div><b>React Developer Interview</b><small>May 18, 2026 • 35 mins</small></div><strong class="score">78%</strong>›</div>
+          <div class="interview-row"><span class="round">♟</span><div><b>HR Round Interview</b><small>May 15, 2026 • 30 mins</small></div><strong class="score">90%</strong>›</div>
+        </div>
+        <div class="card"><h3>AI Feedback Summary</h3><div class="feedback-wrap"><div class="donut"><div><b>85%</b><small>Overall Score</small></div></div><div class="metrics">
+          <p><span>● Communication</span><b>90%</b></p><p><span>● Technical Knowledge</span><b>82%</b></p><p><span>● Problem Solving</span><b>85%</b></p><p><span>● Confidence</span><b>83%</b></p>
+        </div></div><button class="secondary" data-page="feedback">View Detailed Feedback</button></div>
+      </div>
+      <h3 class="section-heading">Quick Actions</h3>
+      <div class="quick-grid">
+        <button class="quick" data-page="interview"><span>▶</span>Start Mock<br>Interview</button>
+        <button class="quick" data-page="resume"><span>▤</span>Upload Resume<br>for Analysis</button>
+        <button class="quick" data-page="questions"><span>?</span>Practice<br>Questions</button>
+        <button class="quick" data-page="tips"><span>💡</span>Get Interview<br>Tips</button>
+      </div>
+    </section>
+
+    <section id="interview" class="page">
+      <div class="page-head"><div><h2>AI Mock Interview</h2><p>Practice a realistic interview with your AI coach.</p></div></div>
+      <div id="setupBox" class="card setup">
+        <h3>Start a New Interview</h3>
+        <div class="form-grid">
+          <label>Job Role<select id="role"><option>Frontend Developer</option><option>Java Developer</option><option>Python Developer</option><option>Data Analyst</option><option>HR / General</option></select></label>
+          <label>Experience<select id="level"><option>Fresher</option><option>1–2 Years</option><option>3–5 Years</option><option>5+ Years</option></select></label>
+          <label>Interview Type<select id="type"><option>Technical</option><option>HR</option><option>Mixed</option></select></label>
+          <label>Number of Questions<select id="count"><option>5</option><option>10</option></select></label>
+        </div><button class="primary" id="beginInterview">Begin AI Interview</button>
+      </div>
+      <div id="interviewBox" class="card interview-box hidden">
+        <div class="interview-meta"><span id="qLabel">Question 1 of 5</span><span class="timer" id="timer">02:00</span></div>
+        <div class="ai-question"><span class="ai-avatar">AI</span><div><b>Intervexa AI</b><p id="questionText"></p></div></div>
+        <textarea id="answer" placeholder="Type your answer here..."></textarea>
+        <div class="answer-actions"><button class="secondary" id="skip">Skip</button><button class="primary" id="submitAnswer">Submit Answer →</button></div>
+      </div>
+      <div id="resultBox" class="card hidden"></div>
+    </section>
+
+    <section id="resume" class="page"><div class="page-head"><div><h2>Resume Analysis</h2><p>Upload your resume and get AI-powered suggestions.</p></div></div>
+      <div class="card upload-card"><div class="upload-icon">↑</div><h3>Upload your resume</h3><p>PDF, DOC or DOCX • Maximum 5 MB</p><input id="resumeFile" type="file" accept=".pdf,.doc,.docx"><button class="primary" id="analyzeResume">Analyze Resume</button></div>
+      <div id="resumeResult" class="card hidden"></div>
+    </section>
+
+    <section id="feedback" class="page"><div class="page-head"><div><h2>AI Feedback</h2><p>Your latest interview performance.</p></div></div>
+      <div class="feedback-large card"><div class="big-score">85%<small>Overall Score</small></div><div class="feedback-list"><div><span>Communication</span><b>90%</b><em style="width:90%"></em></div><div><span>Technical Knowledge</span><b>82%</b><em style="width:82%"></em></div><div><span>Problem Solving</span><b>85%</b><em style="width:85%"></em></div><div><span>Confidence</span><b>83%</b><em style="width:83%"></em></div></div></div>
+      <div class="two-col"><div class="card"><h3>Strengths</h3><ul class="good"><li>Clear and structured answers</li><li>Good understanding of core concepts</li><li>Positive communication style</li></ul></div><div class="card"><h3>Improve Next</h3><ul class="improve"><li>Add more real-world examples</li><li>Explain technical decisions with reasons</li><li>Keep answers concise and focused</li></ul></div></div>
+    </section>
+
+    <section id="questions" class="page"><div class="page-head"><div><h2>Practice Questions</h2><p>Sharpen your skills before the real interview.</p></div></div><div class="filter"><button class="chip active">All</button><button class="chip">JavaScript</button><button class="chip">React</button><button class="chip">Java</button><button class="chip">Python</button><button class="chip">HR</button></div><div id="questionList" class="question-list"></div></section>
+
+    <section id="tips" class="page"><div class="page-head"><div><h2>Interview Tips</h2><p>Simple strategies to perform with confidence.</p></div></div><div class="tips-grid">
+      <div class="tip card"><span>01</span><h3>Use the STAR method</h3><p>Structure behavioral answers with Situation, Task, Action and Result.</p></div>
+      <div class="tip card"><span>02</span><h3>Know your projects</h3><p>Be ready to explain your role, challenges, technologies and outcomes.</p></div>
+      <div class="tip card"><span>03</span><h3>Think before answering</h3><p>Take a short pause and organize your thoughts instead of rushing.</p></div>
+      <div class="tip card"><span>04</span><h3>Ask good questions</h3><p>Prepare thoughtful questions about the role, team and company.</p></div>
+    </div></section>
+
+    <section id="progress" class="page"><div class="page-head"><div><h2>Your Progress</h2><p>Track your interview preparation.</p></div></div><div class="progress-grid"><div class="card"><h3>Weekly Practice</h3><div class="bars"><i style="height:45%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:80%"></i><i style="height:70%"></i><i style="height:90%"></i><i style="height:60%"></i></div><div class="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div><div class="card"><h3>Goals</h3><div class="goal"><span>Complete 20 interviews</span><b>12/20</b><em style="width:60%"></em></div><div class="goal"><span>Practice 50 questions</span><b>24/50</b><em style="width:48%"></em></div><div class="goal"><span>Reach 90% score</span><b>85%</b><em style="width:85%"></em></div></div></div></section>
+
+    <section id="saved" class="page"><div class="page-head"><div><h2>Saved Sessions</h2><p>Your previous practice interviews.</p></div></div><div class="card"><div class="saved-row"><b>Frontend Developer Interview</b><span>88%</span><small>45 min • Technical</small></div><div class="saved-row"><b>Java Developer Interview</b><span>82%</span><small>40 min • Technical</small></div><div class="saved-row"><b>HR Round Interview</b><span>90%</span><small>30 min • HR</small></div></div></section>
+
+    <section id="settings" class="page"><div class="page-head"><div><h2>Settings</h2><p>Manage your Intervexa AI preferences.</p></div></div><div class="card settings"><label>Full Name<input value="Harisha"></label><label>Email<input value="harisha@example.com"></label><label>Dark Mode <input type="checkbox" id="darkMode"></label><button class="primary" id="saveSettings">Save Settings</button></div></section>
+    <section id="help" class="page"><div class="page-head"><div><h2>Help & Support</h2><p>Need help? Start with these common questions.</p></div></div><div class="card faq"><h3>How does the AI interview work?</h3><p>Select a role and interview type. Intervexa AI asks questions and evaluates your answers.</p><h3>Can I upload my resume?</h3><p>Yes. Use Resume Analysis to upload a supported file and review suggestions.</p><h3>Is this a real AI service?</h3><p>This final demo includes a simulated AI coach. A production version can be connected to an LLM API and database.</p></div></section>
+  </main>
+</div>
+<div id="toast"></div>
+<script src="./js/app.js"></script>
+</body>
+</html>
